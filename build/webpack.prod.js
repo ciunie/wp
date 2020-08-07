@@ -8,7 +8,8 @@ const prodConfig = {
     devtool:'cheap-module-source-map',
     output:{
         path:path.resolve(__dirname,'../dist'),
-        filename:'[name].[chunkhash:6].js'  
+        filename:'js/[name].[chunkhash:6].js',
+        publicPath:'../'  
     }
 }
 module.exports = merge(commonConfig,prodConfig)

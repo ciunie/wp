@@ -11,11 +11,13 @@ const devConfig = {
         contentBase:'../dist',
         open:true,
         hot:true,
-        hotOnly:true
+        hotOnly:true,
+        publicPath:'/'
     },
     output:{
         path:path.resolve(__dirname,'../dist'),
-        filename:'[name].[hash:6].js'  
+        filename:'js/[name].[hash:6].js',
+        publicPath:'../'  
     },
     plugins:[new webpack.HotModuleReplacementPlugin()],
     optimization:{
